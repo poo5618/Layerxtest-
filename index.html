@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LayerX - Professional 3D Printing Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo" onclick="navigate('view-home')">
+                LAYER<span>X</span>
+            </div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a onclick="navigate('view-home')" class="nav-btn active" id="nav-view-home">Home</a></li>
+                    <li><a onclick="navigate('view-custom')" class="nav-btn" id="nav-view-custom">Custom Prints</a></li>
+                    <li><a onclick="navigate('view-catalog')" class="nav-btn" id="nav-view-catalog">Gift Catalog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="view-home" class="page-section active">
+            <section class="hero">
+                <div class="container">
+                    <h1>LayerX 3D Printing</h1>
+                    <p>High-quality custom 3D prints, prototypes, and gift items using industrial-grade PLA and PETG materials. Precision manufacturing for your creative projects.</p>
+                    <div class="hero-location">
+                        <i class="fas fa-map-marker-alt"></i> Serving Govandi, Dombivli, Panvel & Harbour Line Stations
+                    </div>
+                    <br>
+                    <a href="https://wa.me/919167268299?text=Hi%20LayerX,%20I%20have%20an%20inquiry%20regarding%203D%20printing." class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                    </a>
+                </div>
+            </section>
+
+            <section class="bg-gray-50">
+                <div class="container">
+                    <h2 class="section-title">Our Services</h2>
+                    <div class="services-grid">
+                        <a onclick="navigate('view-custom')" class="service-card">
+                            <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                            <h3>Custom 3D Prints</h3>
+                            <p>Bring your 3D models to life with precision printing. Click here to view our past customer prints and custom project details.</p>
+                        </a>
+                        <a onclick="navigate('view-custom')" class="service-card">
+                            <div class="service-icon"><i class="fas fa-pencil-ruler"></i></div>
+                            <h3>3D CAD Design</h3>
+                            <p>Don't have a 3D design ready? We offer custom 3D modeling and design services to bring your idea to life (additional charges apply).</p>
+                        </a>
+                        <a onclick="navigate('view-catalog')" class="service-card">
+                            <div class="service-icon"><i class="fas fa-gift"></i></div>
+                            <h3>Gift Catalog</h3>
+                            <p>Browse our catalog of customized gifts, figurines, and decorative items. Perfect for special occasions. Click here to browse.</p>
+                        </a>
+                    </div>
+                    
+                    <div class="process-steps">
+                        <div class="step"><div class="step-number">1</div><h4>Send Your File</h4><p>Share your 3D model via WhatsApp</p></div>
+                        <div class="step"><div class="step-number">2</div><h4>We Review</h4><p>We check printability and quote</p></div>
+                        <div class="step"><div class="step-number">3</div><h4>Print & Finish</h4><p>High-quality printing and processing</p></div>
+                        <div class="step"><div class="step-number">4</div><h4>Delivery</h4><p>Local pickup or delivery</p></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-custom" class="page-section">
+            <section style="padding-top: 3rem;">
+                <div class="container">
+                    <h2 class="section-title">Custom 3D Prints & Design</h2>
+                    
+                    <div class="pricing-note">
+                        <h3 style="color: #2d3748; margin-bottom: 0.8rem; font-size: 1.6rem;">Custom Print Pricing</h3>
+                        <p style="margin-bottom: 1rem; color: #4a5568; font-size: 1.1rem;">Because every custom project is unique, <strong>we do not have fixed prices for custom prints</strong>. The final cost depends entirely on the material type, model complexity, and total machine print time.</p>
+                        <p style="margin-bottom: 1.5rem; color: #4a5568; font-size: 1.1rem;">Please contact us via WhatsApp with your 3D file (.STL or .STEP) for an exact quote.</p>
+                        
+                        <div style="background-color: white; padding: 1.5rem; border-radius: 6px; border: 1px solid #bee3f8; margin-top: 1rem;">
+                            <p style="font-weight: 600; color: #2b6cb0; margin: 0; font-size: 1.1rem;">
+                                <i class="fas fa-pencil-ruler" style="margin-right: 8px;"></i> Don't have a 3D design ready?
+                            </p>
+                            <p style="color: #4a5568; margin-top: 0.5rem;">We offer full 3D CAD modeling and reverse-engineering services to bring your idea to life. (Additional design charges will apply based on the complexity of the model).</p>
+                        </div>
+                        <div style="margin-top: 2rem;">
+                            <a href="https://wa.me/919167268299?text=Hi%20LayerX,%20I%20have%20a%20custom%203D%20printing%20request" class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Contact to Order Custom Print
+                            </a>
+                        </div>
+                    </div>
+
+                    <h3 style="color: #2d3748; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">Past Customer Prints</h3>
+                    
+                    <div class="gallery-grid" id="dynamic-gallery">
+                        <p>Loading gallery...</p>
+                    </div>
+
+                    <h3 style="color: #2d3748; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">Materials & Colors</h3>
+                    <div class="materials-grid">
+                        <div class="material-card">
+                            <div class="material-color pla-color"></div>
+                            <h3>PLA (Polylactic Acid)</h3>
+                            <p><strong>Best For:</strong> Decorative items, prototypes, low-stress applications</p>
+                            <div class="color-list">
+                                <span class="color-pill" style="border-left: 4px solid #dc2626;">Red</span>
+                                <span class="color-pill" style="border-left: 4px solid #000000;">Black</span>
+                                <span class="color-pill" style="border-left: 4px solid #4b5563;">Dark Grey</span>
+                                <span class="color-pill" style="border-left: 4px solid #cbd5e1;">Light Grey</span>
+                                <span class="color-pill" style="border-left: 4px solid #2563eb;">Blue</span>
+                                <span class="color-pill" style="border-left: 4px solid #ffffff;">White</span>
+                            </div>
+                        </div>
+                        <div class="material-card">
+                            <div class="material-color petg-color"></div>
+                            <h3>PETG (Polyethylene)</h3>
+                            <p><strong>Best For:</strong> Functional parts, mechanical components, durable use</p>
+                            <div class="color-list">
+                                <span class="color-pill" style="border-left: 4px solid #dc2626;">Red</span>
+                                <span class="color-pill" style="border-left: 4px solid #000000;">Black</span>
+                                <span class="color-pill" style="border-left: 4px solid #4b5563;">Dark Grey</span>
+                                <span class="color-pill" style="border-left: 4px solid #cbd5e1;">Light Grey</span>
+                                <span class="color-pill" style="border-left: 4px solid #2563eb;">Blue</span>
+                                <span class="color-pill" style="border-left: 4px solid #ffffff;">White</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-catalog" class="page-section bg-gray-50">
+            <section style="padding-top: 3rem;">
+                <div class="container">
+                    <h2 class="section-title">Gift Catalog</h2>
+                    <p style="text-align: center; margin-bottom: 2rem; color: #4a5568;">Browse our collection of fixed-price personalized gifts and decorative items.</p>
+
+                    <div class="catalog-filters">
+                        <button class="filter-btn active" onclick="filterCatalog('all')">All Items</button>
+                        <button class="filter-btn" onclick="filterCatalog('personal')">Personal Gifts</button>
+                        <button class="filter-btn" onclick="filterCatalog('toys')">Toys</button>
+                        <button class="filter-btn" onclick="filterCatalog('decorative')">Decorative</button>
+                    </div>
+
+                    <div class="catalog-grid" id="dynamic-catalog">
+                        <p>Loading catalog...</p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section id="contact" style="padding-bottom: 2rem;">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 1.5rem; color: #2d3748;">Get in Touch</h3>
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Service Areas</h4><p>Govandi, Dombivli, Panvel, and all Harbour Line Stations near Govandi.</p></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Phone / WhatsApp</h4><p><a href="tel:+919167268299" class="contact-link">+91 91672 68299</a></p></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p><a href="mailto:acc.thecraftedstone@gmail.com" class="contact-link">acc.thecraftedstone@gmail.com</a></p></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fab fa-instagram"></i></div><div><h4>Instagram</h4><p><a href="https://instagram.com/_layerx_" target="_blank" class="contact-link">@_layerx_</a></p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">LAYER<span>X</span></div>
+                    <p>Professional 3D printing services for custom projects, prototypes, and gift items. Serving Govandi, Dombivli, Panvel, and Harbour Line Stations.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a onclick="navigate('view-home')">Home</a></li>
+                        <li><a onclick="navigate('view-custom')">Custom Prints</a></li>
+                        <li><a onclick="navigate('view-catalog')">Gift Catalog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect With Us</h4>
+                    <ul>
+                        <li><a href="https://wa.me/919167268299" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="https://instagram.com/_layerx_" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="mailto:acc.thecraftedstone@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"><p>&copy; 2026 LayerX 3D Printing Services. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Navigation Logic
+        function navigate(viewId) {
+            document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
+            document.getElementById(viewId).classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            const navBtn = document.getElementById('nav-' + viewId);
+            if(navBtn) navBtn.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 2. Fetch Data from JSON and Build the Website
+        let catalogItems = [];
+
+        window.onload = function() {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Build Gallery
+                    const galleryHtml = data.past_prints.map(print => `
+                        <div class="gallery-item">
+                            <img src="${print.image}" alt="${print.caption}" onerror="this.outerHTML='<div style=\\'padding: 20px; text-align: center;\\'>[ Upload ${print.image} ]</div>'">
+                            <div class="gallery-caption">${print.caption}</div>
+                        </div>
+                    `).join('');
+                    document.getElementById('dynamic-gallery').innerHTML = galleryHtml;
+
+                    // Build Catalog
+                    catalogItems = data.catalog;
+                    renderCatalog('all');
+                })
+                .catch(error => {
+                    console.error('Error loading data:', error);
+                    document.getElementById('dynamic-catalog').innerHTML = '<p>Error loading catalog. Check data.json.</p>';
+                    document.getElementById('dynamic-gallery').innerHTML = '<p>Error loading gallery. Check data.json.</p>';
+                });
+        }
+
+        function renderCatalog(category) {
+            const grid = document.getElementById('dynamic-catalog');
+            const filtered = category === 'all' ? catalogItems : catalogItems.filter(item => item.category === category);
+            
+            if(filtered.length === 0) {
+                grid.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">No items in this category yet.</p>';
+                return;
+            }
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="catalog-card catalog-item">
+                    <div class="catalog-img">
+                        <img src="${item.image}" alt="${item.title}" onerror="this.outerHTML='[ Upload ${item.image} ]'">
+                    </div>
+                    <div class="catalog-content">
+                        <h3 style="color: #2d3748; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem;">${item.title}</h3>
+                        <p style="color: #4a5568; font-size: 0.9rem;">${item.desc}</p>
+                        <div class="catalog-price">${item.price}</div>
+                        <a href="https://wa.me/919167268299?text=Hi%20LayerX,%20I%20want%20to%20order%20the%20${encodeURIComponent(item.title)}" class="btn btn-whatsapp" style="text-align: center; width: 100%;">
+                            <i class="fab fa-whatsapp"></i> Order Item
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterCatalog(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderCatalog(category);
+        }
+    </script>
+</body>
+</html>
