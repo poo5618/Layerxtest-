@@ -1,0 +1,45 @@
+{
+  "past_prints": [
+    { "image": "images/print1.jpg", "caption": "Custom Mechanical Parts" },
+    { "image": "images/print2.jpg", "caption": "Engineering Prototypes" },
+    { "image": "images/print3.jpg", "caption": "Appliance Replacement Gears" },
+    { "image": "images/print4.jpg", "caption": "Custom Electronics Enclosures" }
+  ],
+  "catalog": [
+    {
+      "category": "personal",
+      "image": "images/keychain.jpg",
+      "title": "Custom Name Keychain",
+      "desc": "Durable two-color personalized keychain. Max 10 characters.",
+      "price": "₹150"
+    },
+    {
+      "category": "personal",
+      "image": "images/lithophane.jpg",
+      "title": "Photo Lithophane",
+      "desc": "Send a photo, we print it as a translucent 3D panel.",
+      "price": "₹600"
+    },
+    {
+      "category": "decorative",
+      "image": "images/penholder.jpg",
+      "title": "Geometric Pen Holder",
+      "desc": "Low-poly modern desktop organizer.",
+      "price": "₹350"
+    },
+    {
+      "category": "decorative",
+      "image": "images/planter.jpg",
+      "title": "Succulent Planter Box",
+      "desc": "Small indoor planter with drainage holes.",
+      "price": "₹400"
+    },
+    {
+      "category": "toys",
+      "image": "images/dragon.jpg",
+      "title": "Articulated Flexi-Dragon",
+      "desc": "Fully movable printed toy. Multiple colors available.",
+      "price": "₹800"
+    }
+  ]
+}
